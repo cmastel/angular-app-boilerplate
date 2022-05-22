@@ -6,14 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { GroupsComponent } from './groups/groups.component';
+import { PeopleComponent } from './people/people.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { GroupsComponent } from './groups/groups.component';
-import { PeopleComponent } from './people/people.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PeopleComponent } from './people/people.component';
     MatListModule,
     MatButtonModule,
     MatIconModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
