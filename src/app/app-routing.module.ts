@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PeopleComponent } from './people/people.component';
-import { GroupsComponent } from './groups/groups.component';
+import { PeopleComponent } from './admin/people/people.component';
+import { GroupsComponent } from './admin/groups/groups.component';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { SettingsComponent } from './admin/settings/settings.component';
@@ -17,8 +17,8 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent },
       { path: 'dashboard', component: DashboardComponent },
-      // { path: 'people', component: PeopleComponent },
-      // { path: 'groups', component: GroupsComponent },
+      { path: 'people', component: PeopleComponent },
+      { path: 'groups', component: GroupsComponent },
       { path: 'settings', component: SettingsComponent }
     ]
   },

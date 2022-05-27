@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { GroupsComponent } from './groups/groups.component';
-import { PeopleComponent } from './people/people.component';
+import { GroupsComponent } from './admin/groups/groups.component';
+import { PeopleComponent } from './admin/people/people.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
