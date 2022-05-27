@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface Person {
   id: number;
@@ -25,14 +27,18 @@ const ELEMENT_DATA: Person[] = [
   templateUrl: './people.component.html',
   styleUrls: ['./people.component.sass']
 })
-export class PeopleComponent implements OnInit {
+export class PeopleComponent implements AfterViewInit {
 
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'age', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   constructor() { }
 
-  ngOnInit(): void {
+  @ViewChild(MatSort)
+  sort: MatSort = new MatSort;
+
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
   }
 
 }

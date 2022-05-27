@@ -15,6 +15,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSortModule } from '@angular/material/sort';
+import { AdminComponent } from './admin/admin.component';
+import { SettingsComponent } from './admin/settings/settings.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,12 @@ import { MatIconModule } from '@angular/material/icon';
     NavbarComponent,
     SidenavComponent,
     GroupsComponent,
-    PeopleComponent
+    PeopleComponent,
+    AdminComponent,
+    SettingsComponent,
+    DashboardComponent,
+    HomepageComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +45,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatIconModule,
     MatTableModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

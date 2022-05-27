@@ -5,12 +5,11 @@
                 <mat-icon style="font-size: 1.5em">home</mat-icon>
                 <span>AngularBoilerplate</span>
             </span>
-
         </a>
-        <a mat-button routerlinkactive="navbar-item-selected" href="/">
-            <span class="mat-button-wrapper">Components</span>
+        <a mat-button [routerLink]="'/about'" routerlinkactive="navbar-item-selected" href="/">
+            <span class="mat-button-wrapper">About</span>
         </a>
-        <a mat-button routerlinkactive="navbar-item-selected" href="/">
+        <a mat-button [routerLink]="'/admin'" routerlinkactive="navbar-item-selected" href="/">
             <span class="mat-button-wrapper">Admin</span>
         </a>
         <span class="spacer"></span>

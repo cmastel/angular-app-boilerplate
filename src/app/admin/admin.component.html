@@ -1,0 +1,24 @@
+<div [style.marginTop.px]="isSmallScreen ? 56 : 64">
+    <mat-toolbar color="primary" >
+        <mat-toolbar-row>
+            <button mat-button *ngIf="isSmallScreen" (click)="sidenav.toggle()">
+            <!-- <button mat-button> -->
+                <mat-icon>menu</mat-icon>
+            </button>
+            <h1 class="section-header">Admin</h1>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="admin-container" [style.top.px]="isSmallScreen ? 112 : 128">
+        <mat-sidenav #sidenav [opened]="!isSmallScreen" [mode]="isSmallScreen ? 'over' : 'side'" class="sidenav" [fixedInViewport]="false" [fixedTopGap]="0"
+            [fixedBottomGap]="0">
+            <mat-nav-list>
+                <a mat-list-item [routerLink]="'/admin/dashboard'" routerLinkActive="side-nav-item-selected">Dashboard</a>
+                <a mat-list-item [routerLink]="'/admin/settings'" routerLinkActive="side-nav-item-selected">Settings</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
